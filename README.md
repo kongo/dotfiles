@@ -9,17 +9,17 @@ To Do
 
 What goes where
 ---------------
-synapse ~/.config
-tint2 ~/.config
-compton.conf ~/.config
-openbox ~/.config
-docky-2 ~/.gconf/apps
-.gitconfig ~
-bin ~
-.gtkrc-2.0 ~
-.gtkrc-2.0.mine ~
-.themes ~
-.conkyrc ~
+    synapse ~/.config
+    tint2 ~/.config
+    compton.conf ~/.config
+    openbox ~/.config
+    docky-2 ~/.gconf/apps
+    .gitconfig ~
+    bin ~
+    .gtkrc-2.0 ~
+    .gtkrc-2.0.mine ~
+    .themes ~
+    .conkyrc ~
 
 .bashrc
 -----------------------------------------
