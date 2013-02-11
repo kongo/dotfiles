@@ -1,0 +1,20 @@
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 343
+	main-window-view = HistoryView
+	file-view-vpane-position = 704
+[user]
+	name = Dmitry Parshenko
+	email = d.parshenko@gmail.com
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[web]
+	browser = google-chrome

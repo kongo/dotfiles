@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="file____home_dmytro_Dropbox" mtime="1360574630" type="int" value="0"/>
+	<entry name="file____home_dmytro_Downloads" mtime="1360574630" type="int" value="0"/>
+	<entry name="file____home_dmytro_Videos" mtime="1360574630" type="int" value="0"/>
+	<entry name="file____home_dmytro_Pictures" mtime="1360574630" type="int" value="0"/>
+	<entry name="file____home_dmytro_Music" mtime="1360574630" type="int" value="0"/>
+	<entry name="file____home_dmytro_Documents" mtime="1360574630" type="int" value="0"/>
+	<entry name="file____home_dmytro" mtime="1360574630" type="int" value="0"/>
+	<entry name="computer___" mtime="1360574630" type="int" value="0"/>
+	<entry name="GMailDockItem_Inbox" mtime="1360574593" type="int" value="0"/>
+	<entry name="DockyItem" mtime="1360574191" type="int" value="175"/>
+</gconf>

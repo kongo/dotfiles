@@ -1,0 +1,11 @@
+#!/bin/bash
+wmctrl -a $1
+exit 0
+if [ "$(pgrep -f $1)" ] 
+then
+  # process was found
+  wmctrl -a $1
+else
+  # process not found
+  `$1` &
+fi
