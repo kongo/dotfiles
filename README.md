@@ -3,9 +3,9 @@ dotfiles
 
 To Do
 -----
-- [x] * add my git mergetool to bin
-- [x] * make findorstart script work with terminal applications
-- [ ] * installation script
+- [x] add my git mergetool to bin
+- [x] make findorstart script work with terminal applications
+- [ ] installation script
 
 What goes where
 ---------------
