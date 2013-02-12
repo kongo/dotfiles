@@ -3,9 +3,9 @@ dotfiles
 
 To Do
 -----
-* installation script
-* add my git mergetool to bin
-* make findorstart script work with terminal applications
+-[x] * add my git mergetool to bin
+-[x] * make findorstart script work with terminal applications
+-[ ] * installation script
 
 What goes where
 ---------------
@@ -25,10 +25,4 @@ What goes where
 -----------------------------------------
     export PS1='\[\e[0;34m\]\w\$\[\e[0m\] '
     alias chrome="google-chrome"
-    alias termin="/usr/bin/terminator"
-
-Just a note for findorstart
----------------------------
-    wmctrl -lx
-    wmctrl -i -a 0x03a00005
 

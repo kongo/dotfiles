@@ -1,11 +1,9 @@
 #!/bin/bash
-wmctrl -a $1
-exit 0
-if [ "$(pgrep -f $1)" ] 
+
+WINDOW_ID=`app_window_ids $1 | head -1`
+if [ -z $WINDOW_ID ]
 then
-  # process was found
-  wmctrl -a $1
+  $1
 else
-  # process not found
-  `$1` &
+  wmctrl -i -a $WINDOW_ID
 fi
