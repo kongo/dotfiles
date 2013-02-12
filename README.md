@@ -5,7 +5,7 @@ To Do
 -----
 - ✓ add my git mergetool to bin
 - ✓ make findorstart script work with terminal applications
-- [ ] installation script
+- installation script
 
 What goes where
 ---------------
