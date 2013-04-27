@@ -1,88 +1,44 @@
-alignment bottom_right
-background no
-border_width 0
-cpu_avg_samples 2
-default_color white
-default_outline_color black
-default_shade_color black
-double_buffer yes
-draw_borders no
-draw_graph_borders yes
-draw_outline no
-draw_shades yes
+alignment middle_left
 use_xft yes
-xftfont terminus:size=10
-gap_x 10
-gap_y 50
-#maximum_width 320
-maximum_width 400
-minimum_size 300 100
-net_avg_samples 2
-no_buffers yes
-out_to_console no
-out_to_stderr no
-extra_newline no
-own_window yes
+xftfont 123:size=8
+xftalpha 0.1
+update_interval 1
+total_run_times 0
+own_window_argb_visual yes
+own_window_argb_value 110
 own_window_class Conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_transparent yes
 own_window_type desktop
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-stippled_borders 0
-update_interval 1.0
+own_window yes
+double_buffer yes
+minimum_size 250 5
+maximum_width 820
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color white
+default_shade_color red
+default_outline_color green
+gap_x 50
+gap_y -200 #вертикальное выравнивание
+no_buffers yes
 uppercase no
-use_spacer none
-show_graph_scale no
-show_graph_range no
-text_buffer_size 5120
-temperature_unit        fahrenheit
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale yes
+use_spacer yes
+
+
 TEXT
-#${font Terminus:style=bold:size=10}SYSTEM $hr
-#${font}$sysname $kernel $alignr $machine
-#Host: $alignr $nodename
-#CPU Core 1 Temp: $alignr${execi 600 sensors -f | grep 'Core 0' | awk '{print $3}' | cut -c2-9}
-#CPU Core 2 Temp: $alignr${execi 600 sensors -f | grep 'Core 1' | awk '{print $3}' | cut -c2-9}
-#CPU Core 3 Temp: $alignr${execi 600 sensors -f | grep 'Core 2' | awk '{print $3}' | cut -c2-9}
-#CPU Core 4 Temp: $alignr${execi 600 sensors -f | grep 'Core 3' | awk '{print $3}' | cut -c2-9}
-#${font Terminus:style=bold:size=10}nVidia GPU $hr
-#${font Terminus:size=10}GPU Temperature   : $alignr$color${execi 10 nvidia-settings -q GPUCoreTemp | awk '{if (NR==2) {print ($4*9)/5+32}}'} °F
-#CPU Fan Speed $alignr${hwmon 1 fan 1} RPM
-#${font Terminus:size=10}GPU Fan Speed       :  $alignr$color${execi 10 nvidia-smi -a | grep Fan} %
-#${font Terminus:size=10}GPU Fan Speed       : $alignr$color${execi 10 nvidia-settings -q GPUCoreTemp} %
-#${font Terminus:size=10}GPU Driver Version : $alignr$color${execi 10 nvidia-settings -t -q NvidiaDriverVersion}
-#${color}GPU Mem: $alignr${color} ${execpi 10 nvidia-settings -q VideoRam | grep  "Attr" | cut -c38-43}Bytes
+${voffset 10}${color EAEAEA}${font steiner:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color a3253d}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font Ubuntu:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 15}${font Ubuntu:pixelsize=58}${offset -148}${time %A}${font}
+${voffset 20}${offset 12}${font Ubuntu:pixelsize=14}${color a3253d}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 28}${color a3253d}RAM ${offset 9}$color$mem / $memmax${offset 20}${color a3253d}CPU ${offset 9}$color${cpu cpu0}%
 
-${color gray}${font Terminus:style=bold:size=10}PROCESSORS $hr
-${font Terminus:size=10}CPU1: ${cpu cpu1}% ${cpubar cpu1}
-CPU2: ${cpu cpu2}% ${cpubar cpu2}
-CPU3: ${cpu cpu3}% ${cpubar cpu3}
-CPU4: ${cpu cpu4}% ${cpubar cpu4}
+#${font Ubuntu:size=8,weight:normal}${color3}${goto 150}${top_mem mem 1}%${goto 200}${font Ubuntu:size=7,weight:normal}${color1}${top_mem name 1} ${goto 300}#${font Ubuntu:size=9,weight:normal}${color1}${top name 1}${goto 470}${color a3253d}${top cpu 1}%
 
-${color gray}${font Terminus:style=bold:size=10}MEMORY 
-${font}RAM ${alignc}     $mem / $memmax  $alignr $memperc%
-${membar}${color gray}
-${font}SWAP ${alignc}    $swap / $swapmax $alignr $swapperc%
-${swapbar}
-#${font Terminus:bold:size=10}${color Tan1}DISKS ${color orange}${hr 2}
-#$font${color orange}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_free_perc /}%
-#${fs_bar /}
-#/HD $alignc ${fs_used /media/1CFC7A8DFC7A60C6} / ${fs_size /media/1CFC7A8DFC7A60C6} $alignr ${fs_free_perc /media/1CFC7A8DFC7A60C6}%
-#${fs_bar /media/1CFC7A8DFC7A60C6}
-#/Fantom $alignc ${fs_used /media/Fantom} / ${fs_size /media/Fantom} $alignr ${fs_free_perc /media/Fantom}%
-#${fs_bar /media/Fantom}
+#${font Ubuntu:size=8,weight:normal}${color3}${goto 150}${top_mem mem 2}%${goto 200}${font Ubuntu:size=7,weight:normal}${color2}${top_mem name 2} ${goto 300}#${font Ubuntu:size=9,weight:normal}${color2}${top name 2}${goto 470}${color a3253d}${top cpu 2}%
 
-${color gray}${font Terminus:style=bold:size=10}TOP PROCESSES               cpu      mem
-${top_mem name 1}$alignr${top_mem cpu 1}% ${top_mem mem 1}%
-${top_mem name 2}$alignr${top_mem cpu 2}% ${top_mem mem 2}%
-${top_mem name 3}$alignr${top_mem cpu 3}% ${top_mem mem 3}%
-${top_mem name 4}$alignr${top_mem cpu 4}% ${top_mem mem 4}%
-${top_mem name 5}$alignr${top_mem cpu 5}% ${top_mem mem 5}%
-${top_mem name 6}$alignr${top_mem cpu 6}% ${top_mem mem 6}%
-${top_mem name 7}$alignr${top_mem cpu 7}% ${top_mem mem 7}%
+#${font Ubuntu:size=8,weight:normal}${color3}${goto 150}${top_mem mem 3}%${goto 200}${font Ubuntu:size=7,weight:normal}${color3}${top_mem name 3} ${goto 300}#${font Ubuntu:size=9,weight:normal}${color3}${top name 3}${goto 470}${color a3253d}${top cpu 3}%
 
-#${color yellow}NETWORK $hr
-#External IP: $alignr ${execi 3600 wget -O - http://whatismyip.org/ | tail}
-#D/L: ${downspeed eth0}/s $alignr ${totaldown eth0}
-#U/L: ${upspeed eth0}/s $alignr ${totalup eth0}
-
-#${execpi 1800 conkyForecast -l USFL0447 --imperial --errorlog=/tmp/conky_forecast.log --template=/home/cavsfan/weather.template --infologfile=/home/cavsfan/cfInfo.log --errorlogfile=/home/cavsfan/cfError.log}
-#${color white}${font Terminus:style=bold:size=10}${time %I:%M%p}${alignr}${time %a %b/%d/%y}
+#${goto 150}${font Ubuntu:size=8,weight:normal}${color a3253d}${threads} ${color1}processes running
