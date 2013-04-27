@@ -20,8 +20,13 @@ gnome-sound-applet &
 
 synapse &
 
-nitrogen --restore &
+# nitrogen --restore &
 
-compton &
+(sleep 3s && compton) &
 
-docky &
+
+# docky &
+
+xxkb &
+
+(sleep 3s && conky) &
