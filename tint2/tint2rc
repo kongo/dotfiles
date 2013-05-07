@@ -9,7 +9,8 @@
 rounded = 0
 border_width = 0
 # background_color = #EDE9E3 100
-background_color = #2e2920 20
+background_color = #2e2920 60
+# 4b4545
 border_color = #FFFFFF 0
 
 # ID 2
@@ -27,7 +28,7 @@ border_color = #FFFFFF 60
 # Panel
 panel_monitor = 1
 panel_position = top center horizontal
-panel_size = 100% 26
+panel_size = 100% 24
 panel_margin = 0 0
 panel_padding = 0 0 7
 panel_dock = 0
@@ -67,11 +68,9 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = Roboto 10
-# task_font_color = #444444 100
+task_font = Droid Sans 11
 task_font_color = #444444 100
 task_active_font_color = #bbbbbb 100
-task_active_font = Roboto 11
 task_urgent_font_color = #ffffff 80
 task_iconified_font_color = #444444 100
 font_shadow = 0
@@ -87,8 +86,8 @@ systray_icon_asb = 70 0 0
 systray_sort = left2right
 
 # Clock
-time1_format = %H:%M | %b %d
-time1_font = Bitstream Vera Sans Mono 9
+time1_format = %b %d    %H:%M 
+time1_font = Droid Sans Bold 9
 clock_font_color = #999999 100
 clock_padding = 5 0
 clock_background_id = 0
