@@ -1,17 +1,19 @@
 [giggle]
-	main-window-maximized = true
-	main-window-geometry = 0x0+0+0
-	history-view-vpane-position = 343
+	main-window-maximized = false
+	main-window-geometry = 800x676+130+40
+	history-view-vpane-position = 167
 	main-window-view = HistoryView
-	file-view-vpane-position = 704
+	file-view-vpane-position = 622
 [user]
-	name = Dmitry Parshenko
+	name = kongo
 	email = d.parshenko@gmail.com
 [alias]
 	st = status
 	ci = commit
 	co = checkout
 	br = branch
+	ps = push
+	pl = pull
 [color]
   branch = auto
   diff = auto
