@@ -1,2 +1,2 @@
 #!/bin/bash
-wmctrl -lx | grep "$1\." | cut -c 1-10
+wmctrl -lx | grep "$1\." | awk -v desktop_id=`curdesktop` '{if($2==desktop_id) print $1}'
