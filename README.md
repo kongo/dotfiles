@@ -27,6 +27,7 @@ What goes where
     .themes           ~
     .conkyrc          ~
     .xxkbrc           ~
+    .xbindkeysrc      ~
 
 .bashrc
 -----------------------------------------

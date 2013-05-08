@@ -1,0 +1,10 @@
+#!/bin/bash
+a=`wmctrl -m | tail -n 1 | awk '{print $NF}'`
+if [ $a = "ON" ]
+then
+  b='off'
+else
+  b='on'
+fi
+
+wmctrl -k $b
