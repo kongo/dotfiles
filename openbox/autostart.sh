@@ -18,15 +18,12 @@ fi
 
 gnome-sound-applet &
 
-synapse &
+synapse -s &
 
 # nitrogen --restore &
 
 (sleep 3s && compton) &
-
-
-# docky &
-
-xxkb &
-
+(sleep 3s && xxkb) &
 (sleep 3s && conky) &
+
+xset -dpms s off
