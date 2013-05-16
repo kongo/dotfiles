@@ -9,7 +9,7 @@
 rounded = 0
 border_width = 0
 # background_color = #EDE9E3 100
-background_color = #2e2920 60
+background_color = #2e2920 80
 # 4b4545
 border_color = #FFFFFF 0
 
@@ -52,9 +52,9 @@ taskbar_active_background_id = 0
 # Tasks
 urgent_nb_of_blink = 8
 task_icon = 1
-task_text = 1
+task_text = 0
 task_centered = 1
-task_maximum_size = 140 20
+task_maximum_size = 40 20
 task_padding = 6 2
 task_background_id = 0
 task_active_background_id = 1
@@ -69,7 +69,7 @@ task_iconified_icon_asb = 70 0 0
 
 # Fonts
 task_font = Droid Sans 11
-task_font_color = #444444 100
+task_font_color = #bbbbbb 100
 task_active_font_color = #bbbbbb 100
 task_urgent_font_color = #ffffff 80
 task_iconified_font_color = #444444 100
@@ -91,6 +91,7 @@ time1_font = Droid Sans Bold 9
 clock_font_color = #999999 100
 clock_padding = 5 0
 clock_background_id = 0
+clock_lclick_command = orage -t
 
 # Tooltips
 tooltip = 0
