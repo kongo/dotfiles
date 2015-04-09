@@ -3,7 +3,13 @@
 WINDOW_ID=`app_window_ids $1 | head -1`
 if [ -z $WINDOW_ID ]
 then
-  $1
+  if [ -z "$2" ]
+  then
+    CMD=$1
+  else
+    CMD=$2
+  fi
+  $CMD
 else
   wmctrl -i -a $WINDOW_ID
 fi
