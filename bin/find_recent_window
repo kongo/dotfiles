@@ -1,0 +1,15 @@
+#!/usr/bin/ruby
+
+hexstr_to_i = lambda { |s| s.to_i(16) }
+
+ws = `xprop -root | grep "_NET_CLIENT_LIST_STACKING\(WINDOW\)"`
+
+all_win_ids  = ws[ws.index('#')+1..ws.length].strip.split(', ').map(&hexstr_to_i).reverse
+
+curdesktop = `curdesktop`.strip
+this_win_ids = `wmctrl -lx | grep "#{ARGV[0]}\." | awk -v desktop_id=#{curdesktop} '{if($2==desktop_id) print $1}'`.split.map(&hexstr_to_i)
+
+window_id = (all_win_ids & this_win_ids).first
+window_id_str = "0x" + sprintf("%08x", window_id)
+
+`wmctrl -i -a #{window_id_str}`

@@ -11,5 +11,5 @@ then
   fi
   $CMD
 else
-  wmctrl -i -a $WINDOW_ID
+  find_recent_window $1
 fi
